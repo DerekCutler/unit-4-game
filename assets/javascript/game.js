@@ -1,72 +1,78 @@
-// Start up function
-$(document).ready(function () {
-let score = 0;
-// console.log("score" + score)
-let winCount = 0;
-// console.log("winCount" + winCount)
-let loseCount = 0;
-// console.log("losecount" + losecount)
-let randomNumber = Math.floor(Math.random() * 101) + 19; 
+// Start up 
+var randomNumber = Math.floor(Math.random() * 101) + 19;
 // console.log(randomNumber);
+var score = 0;
+// console.log("score" + score)
+var winCount = 0;
+// console.log("winCount" + winCount)
+var loseCount = 0;
+// console.log("loseCount" + loseCount)
 
 
-$("#randomNumber").html("<h2>Random Number: | " + randomNumber);
-$("#score").html("<h2>Score: | " + score);
-
-$("#winCount").html("<h2>Wins: | " + winCount);
-$("#loseCount").html("<h2>Losses: | " + loseCount);
+// Working?
+var redval = Math.floor(Math.random() * 11) + 1;
+// console.log("redval" + redval);
 
 
 
-
-// NO WORKY (repeat for all 4 when wokking)
-// let redval = Math.floor(Math.random() * 11) + 1; 
-// console.log(red);
-
-
-// UNTESTED Once working recreate for loss++
+// Win count goes up and displays html, calls reset 
 function win() {
-wincount++;
-score = 0;
-randomNumber = Math.floor(Math.random() * 101) + 19;
+    winCount++;
+    $("#winCount").html("<h2>Wins: " + winCount);
+    reset();
 }
-// UNTESTED
 
+// Loss count goes up and displays html, calls reset
+function lose() {
+    loseCount++;
+    $("#loseCount").html("<h2>Losses: " + loseCount);
+    reset();
+}
 
-// UNTESTED ONCE WORKING RECREATE 4
-$("red").on("click") (function() {
-    score = score + red;
+// checks the score to see if win or loss triggers
+function checkScore() {
     if (score === randomNumber) {
         win();
     } else if (score > randomNumber) {
-        (score > randomNumber)
         lose();
-    } else { return }
+    }
+}
+
+// resets new round sets score to 0 and displays HTML, updates random number and displays HTML
+function reset() {
+    score = 0;
+    $("#score").html("<h2>Score: " + score);
+    randomNumber = Math.floor(Math.random() * 101) + 19;
+    $("#randomNumber").html("<h2>Random Number: " + randomNumber);
+    //Trigger reset of the gems?
+}
+
+
+// After Functions load before click events
+$(document).ready(function () {
+
+
+    // Show in the HTMLs
+    $("#randomNumber").html("<h2>Random Number: " + randomNumber);
+    $("#score").html("<h2>Score: " + score);
+
+    $("#winCount").html("<h2>Wins: " + winCount);
+    $("#loseCount").html("<h2>Losses: " + loseCount);
+
+
+    // UNTESTED ONCE WORKING RECREATE 4
+    $("#red").on("click", function () {
+        score += redval;
+        $("#score").html("<h2>Score: " + score);
+        checkScore();
+        return;
+    });
+
+
 });
-// UNTESTED
 
 
 
-
-
-
-
-
-// WORKS UPTO THIS
-
-// Reset function
-
-
-});
-
-
-
-
-
-
-
-// Show in HTML under: <div id="jQueryMagic"></div>
-// $(document).getElementById("jQueryMagic").innerHTML = jQueryMagic;
 
 //** */FIN**
 
