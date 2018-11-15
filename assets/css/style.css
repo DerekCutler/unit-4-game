@@ -28,7 +28,7 @@ h1 {
 
 h2 {font-size: 21px;}
 
-.cont1-1 {
+.cont1 {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
@@ -49,18 +49,18 @@ h2 {font-size: 21px;}
 }
 
 
-.cont2-1{
+.cont2{
 	display: flex;
 	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: center;
+	flex-wrap: wrap;
+	justify-content: space-around;
 	align-items: center;
-	align-content: center;
+	align-content: space-around;
     color: lightgrey;
     font-family: 'Times New Roman', Times, serif;
     background-color: black;
     width: 100%;
-    min-height: 100px; /* added */
+    
     height: auto;    
     padding: 10px;
     border-color: cccccc;
@@ -70,7 +70,30 @@ h2 {font-size: 21px;}
     border-color: lightgrey;  
 }
 
-.cont3-1 { 
+
+
+.cont3 { 
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: space-around;
+    color: lightgrey;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: black;
+    width: 100%;
+    min-height: 100px; /* added */
+    height: auto;
+    padding: 10px;
+    border-color: cccccc;
+    border-radius: 42px;
+    border: 1px; 
+    border-style: solid;
+    border-color: lightgrey;  
+}
+
+.cont4 { 
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;

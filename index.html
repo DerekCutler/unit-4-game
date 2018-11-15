@@ -5,48 +5,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+
+    <!-- Local jQ -->
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+
     <link href="assets/css/reset.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
-
 
     <title>Crystals Collector | Homework4</title>
 
 </head>
 
 
+
 <body>
 
-    <div class="cont1-1">
+    <div class="cont1">
         <h1>Crystals Collector</h1>
     </div>
 
     <div><br></div>
 
-    <div class="cont2-1">
-        <div id="jQueryMagic"></div>
+    <div class="cont2">
+        
+            <div id="randomNumber"></div>
+            <div id="score"></div><br>
+            <div id="winCount"></div>
+            <div id="loseCount"></div>
+    </div>
+
+
+    <div><br></div>
+
+    <div class="cont3">
+        <img src="assets/images/ruby.png" alt="ruby" width="200px" height="200px" id="red">
+        <img src="assets/images/amathyst.png" alt="amathyst" width="200px" height="200px" id="purple">
+        <img src="assets/images/saphire.png" alt="saphire" width="200px" height="200px" id="blue">
+        <img src="assets/images/emerald.png" alt="emerald" width="200px" height="200px" id="green">
     </div>
 
     <div><br></div>
 
-    <div class="cont3-1">
-            <header>
+    <div class="cont4">
+        <header>
 
-                    <h1>Instructions:</h1><br>
-                    <h2>
-                        <ul style="list-style-type:square">
-                            <li>You will be given a random number at the start of the game</li>
-                            <li>There are four crystals above.  
-                                By clicking on a crystal you will a specific amount of points to your total score.
-                            </li>
-                            <li>You win the game by matching your score to the random number provided.
-                                However, if you go over the random number; you lose.
-                            </li>
-                            <li>The value of the crystal is hidden from you to spice up the game.</li>
-                            <li>Each time you restart the game, the value of the crystal will also change.</li>
-                            <li>May the force be ever in your favor, always!</li>
-                        </ul>
-                    </h2>
-                </header>        
+            <h1>Instructions:</h1><br>
+            <h2>
+                <ul style="list-style-type:square">
+                    <li> You will be given a random number at the start of the game</li>
+                    <li> There are four crystals above.
+                        By clicking on a crystal you will add a specific amount of points to your total score.
+                    </li>
+                    <li> You win the game by matching your score to the random number provided.
+                        However, if you go over the random number; you lose.
+                    </li>
+                    <li> The value of the crystal is hidden from you to spice up the game.</li>
+                    <li> Each time you restart the game, the value of the crystal will also change.</li>
+                    <li> May the force be ever in your favor, always!</li>
+                    <br>
+                </ul>
+            </h2>
+        </header>
     </div>
 
     <div><br></div>
