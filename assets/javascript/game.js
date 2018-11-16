@@ -29,14 +29,14 @@ function checkScore() {
 // If win triggers; Wins count goes up and displays html, calls reset 
 function win() {
     winCount++;
-    $("#winCount").html("<h2>Wins: " + winCount);
+    $("#winCount").html("<h2>Wins: " + winCount + "</h2>");
     reset();
 }
 
 // If lose triggers; Losses count goes up and displays html, calls reset 
 function lose() {
     loseCount++;
-    $("#loseCount").html("<h2>Losses: " + loseCount);
+    $("#loseCount").html("<h2>Losses: " + loseCount + "</h2>");
     reset();
 }
 
@@ -47,7 +47,7 @@ function reset() {
     score = 0;
     $("#score").html("<h2>Score: " + score);
     randomNumber = Math.floor(Math.random() * 101) + 19;
-    $("#randomNumber").html("<h2>Random Number: " + randomNumber);
+    $("#randomNumber").html("<h2>Random Number: " + randomNumber + "</h2>");
     redval = Math.floor(Math.random() * 12) + 1;
     purpleval = Math.floor(Math.random() * 12) + 1;
     blueval = Math.floor(Math.random() * 12) + 1;
@@ -60,17 +60,17 @@ $(document).ready(function () {
 
 
     // Show in the HTMLs
-    $("#randomNumber").html("<h2>Random Number: " + randomNumber);
-    $("#score").html("<h2>Score: " + score);
+    $("#randomNumber").html("<h2>Random Number: " + randomNumber + "</h2>");
+    $("#score").html("<h2>Score: " + score + "</h2>");
 
-    $("#winCount").html("<h2>Wins: " + winCount);
-    $("#loseCount").html("<h2>Losses: " + loseCount);
+    $("#winCount").html("<h2>Wins: " + winCount + "</h2>");
+    $("#loseCount").html("<h2>Losses: " + loseCount + "</h2>");
 
 
     //  Seems to work 
     $("#red").on("click", function () {
         score += redval;
-        $("#score").html("<h2>Score: " + score);
+        $("#score").html("<h2>Score: " + score + "</h2>");
         checkScore();
         return;
     });
@@ -79,7 +79,7 @@ $(document).ready(function () {
     //  Seems to work 
     $("#purple").on("click", function () {
         score += purpleval;
-        $("#score").html("<h2>Score: " + score);
+        $("#score").html("<h2>Score: " + score + "</h2>");
         checkScore();
         return;
     });
@@ -87,7 +87,7 @@ $(document).ready(function () {
     //  Seems to work 
     $("#blue").on("click", function () {
         score += blueval;
-        $("#score").html("<h2>Score: " + score);
+        $("#score").html("<h2>Score: " + score + "</h2>");
         checkScore();
         return;
     });
@@ -96,7 +96,7 @@ $(document).ready(function () {
     //  Seems to work 
     $("#green").on("click", function () {
         score += greenval;
-        $("#score").html("<h2>Score: " + score);
+        $("#score").html("<h2>Score: " + score + "</h2>");
         checkScore();
         return;
     });
